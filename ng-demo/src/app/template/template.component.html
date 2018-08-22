@@ -1,0 +1,41 @@
+<p>
+  Mustaches can call functions : {{ getName() }}
+</p>
+
+<!-- [xyz] will modify native JavaScript property -->
+<nav [textContent]=" 'Waouww' ">Hello</nav>
+
+<nav [textContent]=" getContent() ">Hello</nav>
+
+<!-- * means a modification of the DOM structure -->
+<ul>
+  <li *ngFor="let u of users"> {{u}}</li>
+</ul>
+
+<div *ngIf="users.length > 3">
+  There is a lot of users
+</div>
+
+<!-- Condition() is a function call-->
+<div *ngIf="condition()">
+  There is a lot of users
+</div>
+
+<div class="impressive"> This is a impressive DIV</div>
+
+<div [className]="getImpressiveStyle()"> This is also an impressive DIV</div>
+
+<!-- ngClass is NOT a standard JS property.It's an Angular 'directive'-->
+<div [ngClass]="{banana:users.length > 3}"> This is a conditional class</div>
+
+<!-- We can declare a variable on a component -->
+<div #friend>Hello My Friend</div>
+
+<div>The content was: {{friend.textContent}}</div>
+
+<input type="text" value="I am a data" #myInput>
+
+<div>Value is:{{myInput.value}}</div>
+
+<!-- () are events ; Events will recompile all the pseudo-HTML -->
+<button (click)="clearUsers()">Delete People</button>

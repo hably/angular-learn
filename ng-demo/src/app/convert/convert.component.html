@@ -1,0 +1,20 @@
+<p>
+  convert rocks! {{test()}}
+</p>
+
+<div>
+  <h2>Convert</h2>
+
+  <form #myForm="ngForm">
+
+    <input type="number"
+           name="globalUnits">
+
+    <input type="email"
+           name="email">
+
+    <br/>
+    <button [disabled]="!isValid()">OK</button>
+
+  </form>
+</div>
