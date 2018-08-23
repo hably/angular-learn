@@ -1,0 +1,11 @@
+/* Put the good flex stuff */
+div {
+  display: flex;
+  width: 100%;
+}
+
+span {
+  justify-content: space-around;
+  width: 33%;
+  text-align: center;
+}
