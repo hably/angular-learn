@@ -1,0 +1,18 @@
+
+<table class="table table-striped">
+
+  <thead>
+  <th>Name</th>
+  <th>Symbol</th>
+  <th>Value</th>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let i of this.service.coins">
+    <td>{{i.name}}</td>
+    <td>{{i.symbol}}</td>
+    <td>{{i.value}}</td>
+  </tr>
+  </tbody>
+
+</table>
